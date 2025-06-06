@@ -13,7 +13,7 @@ This script is designed to **generate a secure random password**, **assign it to
 - Saves the encrypted password to a temporary file for EA retrieval
 - Sends a `jamf recon` to update inventory in Jamf Pro
 
-## 🔧 Configuration
+## 🔧 Configuration (script.sh)
 
 ### Variables
 - `adminUser`: The local admin account to update (default: `admin`)
@@ -23,23 +23,30 @@ Make sure to **replace the `encryptionKey`** with a secure, private key known on
 
 ## 📂 Output
 
-- Encrypted password is saved to:
-/private/var/tmp/encrypted_localadmin_password.txt
+- Encrypted password is saved to:  
+  `/private/var/tmp/encrypted_localadmin_password.txt`
 
 Use a custom Extension Attribute in Jamf Pro to read this file and report the encrypted password to the Jamf console.
+
+## 🧩 Decryption Extension Attribute
+
+If you want to **decrypt the password inside Jamf Pro**, you can configure a second **Extension Attribute** with the extension_attribute.sh script.
+
+⚠️ **Caution:** This will expose the password in plaintext in Jamf Pro. Restrict access using Jamf's RBAC settings.
 
 ## 🖥️ Usage
 
 1. Deploy the script to your macOS devices using a Jamf policy.
 2. Ensure the `admin` user exists.
 3. After execution, the script will:
- - Rotate the password
- - Encrypt and store it temporarily
- - Trigger an inventory update (`jamf recon`)
+   - Rotate the password
+   - Encrypt and store it temporarily
+   - Trigger an inventory update (`jamf recon`)
 
 ## 🔐 Security Notes
 
-- The encryption key should be stored securely and rotated periodically, use the script in a policy and run it for example once a week.
+- The encryption key should be stored securely and rotated periodically.
+- Run the script via a Jamf policy (e.g., weekly) to ensure regular password rotation.
 - Ensure that the temporary file is read only by authorized scripts or tools.
 
 ## 📜 License
