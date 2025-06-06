@@ -27,3 +27,5 @@ Ideas, feedback, and suggestions are always welcome!
 If you find a bug or want to improve something, feel free to open an issue or submit a pull request.
 
 Luca
+
+![Profile Visits](https://img.shields.io/endpoint?url=https://yasinkalkan.com/api/githubvisitorstats/track/?user=lucaesse)
