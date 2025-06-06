@@ -39,9 +39,8 @@ Use a custom Extension Attribute in Jamf Pro to read this file and report the en
 
 ## 🔐 Security Notes
 
-- The encryption key should be stored securely and rotated periodically.
+- The encryption key should be stored securely and rotated periodically, use the script in a policy and run it for example once a week.
 - Ensure that the temporary file is read only by authorized scripts or tools.
-- Consider implementing a cleanup mechanism to remove the file after it's read.
 
 ## 📜 License
 
