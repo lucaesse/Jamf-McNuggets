@@ -55,4 +55,12 @@ MIT License
 
 ---
 
-Created by lucaesse
+Created by lucaesse <br /><br />
+<img src="https://img.shields.io/badge/macOS-383838?logo=apple&logoColor=white" alt="macOS">
+<img src="https://img.shields.io/badge/shell_script-%23121011.svg?logo=gnu-bash&logoColor=white" alt="Shell Script">
+<img src="https://img.shields.io/badge/Jamf-002163?logo=devbox&logoColor=white" alt="Jamf">
+
+<hr>
+<p><i>Enjoying the content? Help me stay caffeinated while I try to make stuff ☕</i></p>
+        <a href='https://ko-fi.com/N4N11G5OW8' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
