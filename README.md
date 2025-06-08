@@ -28,4 +28,6 @@ If you find a bug or want to improve something, feel free to open an issue or su
 
 Luca
 
-![Profile Visits](https://img.shields.io/endpoint?url=https://yasinkalkan.com/api/githubvisitorstats/track/?user=lucaesse)
+<hr>
+<p><i>Enjoying the content? Help me stay caffeinated while I try to make stuff ☕</i></p>
+        <a href='https://ko-fi.com/N4N11G5OW8' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
