@@ -57,8 +57,9 @@ MIT License
 
 Created by lucaesse <br /><br />
 <img src="https://img.shields.io/badge/macOS-383838?logo=apple&logoColor=white" alt="macOS">
-<img src="https://img.shields.io/badge/shell_script-%23121011.svg?logo=gnu-bash&logoColor=white" alt="Shell Script">
+<img src="https://img.shields.io/badge/Shell_Script-%23121011.svg?logo=gnu-bash&logoColor=white" alt="Shell Script">
 <img src="https://img.shields.io/badge/Jamf-002163?logo=devbox&logoColor=white" alt="Jamf">
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=lucaesse.Jamf-McNuggets)
 
 <hr>
 <p><i>Enjoying the content? Help me stay caffeinated while I try to make stuff ☕</i></p>
