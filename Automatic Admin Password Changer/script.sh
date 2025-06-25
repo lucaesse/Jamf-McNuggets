@@ -8,6 +8,10 @@
 adminUser="admin" # The name of you admin user account
 encryptionKey="123456"  # Encryption key
 
+# Password length settings
+minLength=20
+maxLength=28
+
 # Lists of words and suffixes, you can add or modify words
 words=(apple banana cherry lion tiger bear shark eagle fox dolphin giraffe elephant rocket bicycle avocado blueberry coconut dragonfruit eggplant grapefruit jackfruit lime peach plum pomegranate rhubarb starfruit)
 suffixes=(!lemon .WHITE! -mint !grape .TEA! -ICE! !cookie .ZEBRA! -juice !berry .HONEY! -melon !fruit .SPICE! -nut !cream .SUGAR! -pie !cake .CANDY! -syrup !jam .JELLY! -pudding !tart .CRISP! -sorbet !mousse .FROSTING! -fudge)
@@ -47,13 +51,24 @@ while true; do
         fi
         finalPassword+="$char"
     done
-    if [[ ${#finalPassword} -ge 20 ]]; then
+
+    # Rimuove newline accidentali
+    finalPassword=$(echo "$finalPassword" | tr -d '\n')
+
+    # Controllo su caratteri indesiderati
+    if [[ "$finalPassword" =~ [$'\n\r\t'] ]]; then
+        echo "Password contains invalid characters. Regenerating..."
+        continue
+    fi
+
+    # Controllo lunghezza minima e massima
+    if [[ ${#finalPassword} -ge $minLength && ${#finalPassword} -le $maxLength ]]; then
         break
     fi
 done
 
 # Debug log
-echo "Generated password: $finalPassword"
+echo "Generated password (length ${#finalPassword}): [$finalPassword]"
 
 # Change the password
 echo "Changing password..."
@@ -67,7 +82,7 @@ echo "Password encrypted."
 
 # Write the result to a file readable by the EA script
 echo "Writing temporary file..."
-echo "$encryptedPassword" > /private/var/tmp/encrypted_localadmin_password.txt
+printf "%s" "$encryptedPassword" > /private/var/tmp/encrypted_localadmin_password.txt
 echo "Temporary file written."
 
 # Update inventory to send value to EA
