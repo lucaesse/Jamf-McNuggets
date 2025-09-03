@@ -82,7 +82,7 @@ echo "Password encrypted."
 
 # Write the result to a file readable by the EA script
 echo "Writing temporary file..."
-printf "%s" "$encryptedPassword" > /private/var/tmp/encrypted_localadmin_password.txt
+printf "%s" "$encryptedPassword" > /Library/Application Support/Jamf/encrypted_localadmin_password.txt
 echo "Temporary file written."
 
 # Update inventory to send value to EA
