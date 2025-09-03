@@ -5,7 +5,7 @@
 #!/bin/bash
 
 # Path to the encrypted file
-file="/private/var/tmp/encrypted_localadmin_password.txt"
+file="/Library/Application Support/Jamf/encrypted_localadmin_password.txt"
 key="123456"  # Encryption key
 
 # Check if the file exists and contains data
