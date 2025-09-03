@@ -24,7 +24,7 @@ Make sure to **replace the `encryptionKey`** with a secure, private key known on
 ## 📂 Output
 
 - Encrypted password is saved to:  
-  `/private/var/tmp/encrypted_localadmin_password.txt`
+  `/Library/Application Support/Jamf/encrypted_localadmin_password.txt`
 
 Use a custom Extension Attribute in Jamf Pro to read this file and report the encrypted password to the Jamf console.
 
